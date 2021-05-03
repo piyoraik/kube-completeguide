@@ -8,6 +8,6 @@ spec:
     - name: 'http-port'
       protocol: "TCP"
       port: 8080      #エンドポイントにアクセスがきたポート
-      targetPort: 80  #コンテナに処理を渡すポート
+      targetPort: 80  #コンテナに処理を渡すポートexi
   selector:
     app: sample-app
