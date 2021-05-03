@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-lb
+spec:
+  type: LoadBalancer
+  ports:
+    - name: "http-port"
+      protocol: "TCP"
+      port: 8080 # LoadBalancerが払い出す仮想IPとClusterIPで受け付けるポート番号
+      targetPort: 80  # 転送先のポート番号
+      nodePort: 30082 # 自動割当されるが指定も可能
+  selector:
+    app: sample-app
